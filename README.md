@@ -1,8 +1,8 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h2>User authentication using Firebase</h2>
+<h3>Create user with email, pass</h3>
+<ul>
+<li>Call createUserWithEmailAndPassword()</li>
+<li>And pass auth, email, and pass as parameter createUserWithEmailAndPassword(auth, email, pass)</li>
+<li>After createUserWithEmailAndPassword() method call .then and .catch</li>
+<li>Access the response from firebase inside .then(result => {console.log(result.user)})</li>
+</ul>

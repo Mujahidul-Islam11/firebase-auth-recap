@@ -1,7 +1,9 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import auth from "../../firebase.config";
+import { useState } from "react";
 
 const Form = () => {
+    const [user, setUser] = useState()
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -11,7 +13,7 @@ const Form = () => {
 
     createUserWithEmailAndPassword(auth, email, pass)
       .then((result) => {
-        console.log(result.user);
+        setUser(result.user)
       })
       .catch((error) => {
         console.error(error);
@@ -19,6 +21,7 @@ const Form = () => {
   };
   return (
     <div>
+        <h3>{user && user.email}</h3>
       <form
       onSubmit={handleSubmit}
         style={{
