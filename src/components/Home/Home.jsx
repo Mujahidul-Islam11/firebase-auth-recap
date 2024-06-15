@@ -9,7 +9,7 @@ const Home = () => {
     <div>
       <h3>This is home</h3>
       {/* <Form></Form> */}
-      <Google_SignIn></Google_SignIn>
+      {/* <Google_SignIn></Google_SignIn> */}
     </div>
   );
 };
