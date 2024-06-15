@@ -1,18 +1,24 @@
 import { signInWithPopup, FacebookAuthProvider } from "firebase/auth";
 import auth from "../../firebase.config";
+import { useState } from "react";
 
 const FacebookSignIn = () => {
+    const [user, setUser] = useState({})
   const provider = new FacebookAuthProvider();
-  signInWithPopup(auth, provider)
+  const handleSignIn = () =>{
+    signInWithPopup(auth, provider)
   .then(result =>{
     console.log(result.user)
+    setUser(result.user)
   })
   .catch(error =>{
     console.log(error)
   })
+  }
   return (
     <div>
-      <button>Sign in with fb</button>
+      <button onClick={handleSignIn}>Sign in with fb</button>
+      <img src={user?.photoURL} alt="" />
     </div>
   );
 };
