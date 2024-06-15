@@ -19,6 +19,7 @@ const Form = () => {
         console.error(error);
       });
   };
+  
   return (
     <div>
         <h3>{user && user.email}</h3>
