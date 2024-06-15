@@ -17,8 +17,10 @@ const Google_SignIn = () => {
   console.log(user)
   return (
     <div>
-        <h2>Welcome, {user.displayName}</h2>
       <button onClick={handleGoogleSignIn}>Sign In With Google</button>
+        <h2>Welcome, {user?.displayName}</h2>
+        <p>{user?.email}</p>
+        <img src={user?.photoURL} alt="" />
     </div>
   );
 };
